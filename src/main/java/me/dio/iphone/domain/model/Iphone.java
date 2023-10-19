@@ -1,6 +1,8 @@
 package me.dio.iphone.domain.model;
 
-public class Iphone {
+import me.dio.iphone.domain.interfaces.Internet;
+
+public class Iphone implements Internet {
     //Repodutor Musicial: tocar, pausar, selecionarMusica
 
     private boolean play;
@@ -35,5 +37,17 @@ public class Iphone {
 
     public void setVolume(String volume) {
         this.volume = volume;
+    }
+
+    public String showPage() {
+        return "Show the page";
+    }
+
+    public String addNewTab() {
+        return "Add new Tab";
+    }
+
+    public String updatePage() {
+        return "Update the page";
     }
 }
