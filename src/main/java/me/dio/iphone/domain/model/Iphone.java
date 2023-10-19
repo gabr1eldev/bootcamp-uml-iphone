@@ -7,7 +7,7 @@ public class Iphone implements Internet {
 
     private boolean play;
     private Musics selectMusic;
-    private String volume;
+    private Integer volume;
 
     public String isPlay() {
         if(this.play) {
@@ -31,11 +31,15 @@ public class Iphone implements Internet {
         this.selectMusic.getMusics().get(select);
     }
 
-    public String getVolume() {
-        return volume;
+    public Integer getVolume() {
+        if(this.volume.equals("+")) {
+            return this.volume++;
+        } else {
+            return this.volume--;
+        }
     }
 
-    public void setVolume(String volume) {
+    public void setVolume(Integer volume) {
         this.volume = volume;
     }
 
